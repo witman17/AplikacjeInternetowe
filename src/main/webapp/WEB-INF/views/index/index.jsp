@@ -4,6 +4,6 @@
     <title> Rezerwuj </title>
 </head>
 <body>
-<h2>Rezerwuj</h2>
+<h2>Rezerwujudu</h2>
 </body>
 </html>
