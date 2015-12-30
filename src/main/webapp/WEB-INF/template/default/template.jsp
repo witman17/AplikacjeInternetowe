@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='webjars/bootswatch-darkly/3.1.1+1/css/bootstrap.min.css'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>AppName</title>
 
@@ -25,6 +25,6 @@
     <tiles:insertAttribute name="footer" />
 
     <script type="text/javascript" src="webjars/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="webjars/bootswatch-darkly/3.1.1+1/js/bootstrap.min.js"></script>
 </body>
 </html>
