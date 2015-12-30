@@ -4,9 +4,17 @@
     <tiles:putAttribute name="body">
 
         <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>...</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            <div class="container">
+                <label for="location">Choose a city</label>
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" name="locationName" placeholder="eg.Pipidowek" id="location">
+                    </div>
+                <label for="restaurant">Choose a restaurant</label>
+                    <div class="input-group input-group-lg">
+                        <select class="form-control" id="restaurant" disabled="true"></select>
+                    <div>
+                    <div class="btn btn-primary">Submit</div>
+            </div>
         </div>
 
     </tiles:putAttribute>
