@@ -3,19 +3,48 @@
 <tiles:insertDefinition name="defaultTemplate">
     <tiles:putAttribute name="body">
 
-        <div class="jumbotron">
+        <div class="jumbotron vertical-center"">
             <div class="container">
-                <label for="location">Choose a city</label>
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" name="locationName" placeholder="eg.Pipidowek" id="location">
-                    </div>
-                <label for="restaurant">Choose a restaurant</label>
-                    <div class="input-group input-group-lg">
-                        <select class="form-control" id="restaurant" disabled="true"></select>
-                    <div>
-                    <div class="btn btn-primary">Submit</div>
+                <div class="form-group col-md-4">
+                    <label for="location" class="control-label">Choose a city</label>
+                    <input type="text" class="form-control" placeholder="eg. Warszawa" id="location" onchange="enableSelect();"
+                    onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="restaurant" class="control-label">Choose a restaurant</label>
+                    <select class="form-control" id="restaurant" disabled="true"></select>
+                </div>
+                <div class="form-group col-md-8">
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </div>
             </div>
         </div>
 
     </tiles:putAttribute>
 </tiles:insertDefinition>
+
+<script>
+$(document).ready(function() {
+var availableTags = [
+      "Warszawa",
+      "Krakow",
+      "Wroclaw",
+      "Lublin",
+      "Radom",
+      "Poznan",
+      "Katowice",
+      "Gdansk",
+      "Lodz",
+      "Szczecin"
+    ];
+    $( "#location" ).autocomplete({
+      source: availableTags
+    });
+});
+</script>
+
+<script>
+    function enableSelect(){
+        $("#restaurant").prop("disabled", false);
+    }
+</script>
