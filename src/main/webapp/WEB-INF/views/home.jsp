@@ -7,8 +7,8 @@
             <div class="container">
                 <div class="form-group col-md-4">
                     <label for="location" class="control-label">Choose a city</label>
-                    <input type="text" class="form-control" placeholder="eg. Warszawa" id="location" onchange="enableSelect();"
-                    onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+                    <input type="text" class="form-control" placeholder="eg. Warszawa" id="location"
+                    onchange="enableSelect();" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="restaurant" class="control-label">Choose a restaurant</label>
@@ -41,10 +41,12 @@ var availableTags = [
       source: availableTags
     });
 });
-</script>
 
-<script>
-    function enableSelect(){
-        $("#restaurant").prop("disabled", false);
-    }
+var enableSelect = function (){
+    $("#restaurant").prop("disabled", false);
+}
+
+var disableSelect = function (){
+    $("#restaurant").prop("disabled", true);
+}
 </script>
