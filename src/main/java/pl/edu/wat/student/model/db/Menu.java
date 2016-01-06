@@ -1,4 +1,4 @@
-package pl.edu.wat.student.model;
+package pl.edu.wat.student.model.db;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package pl.edu.wat.student.model;
+package pl.edu.wat.student.model.db;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

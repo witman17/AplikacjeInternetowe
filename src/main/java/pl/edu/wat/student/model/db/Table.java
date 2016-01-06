@@ -1,4 +1,4 @@
-package pl.edu.wat.student.model;
+package pl.edu.wat.student.model.db;
 
 /**
  * Created by Witold on 2015-12-23.

@@ -4,17 +4,19 @@
     <tiles:putAttribute name="body">
 
 <h2>Log in</h2>
-<form class="form-horizontal well">
+<form class="form-horizontal well" name="user" method="post">
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-10">
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email"
+        required>
       </div>
     </div>
     <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Password</label>
       <div class="col-lg-10">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password"
+        required>
         <div class="checkbox">
           <label>
             <input type="checkbox"> Remember me

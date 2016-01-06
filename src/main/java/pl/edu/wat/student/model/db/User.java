@@ -1,4 +1,4 @@
-package pl.edu.wat.student.model;
+package pl.edu.wat.student.model.db;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -13,16 +13,14 @@ public class User {
     @Id
     private String id;
     @Indexed(unique = true)
-    private String username;
+    private String email;
     private String password;
     private String name;
     private String surname;
-    private String email;
     private String phone;
 
-    public User(String id, String username, String password, String name, String surname, String email, String phone) {
+    public User(String id, String password, String name, String surname, String email, String phone) {
         this.id = id;
-        this.username = username;
         this.password = password;
         this.name = name;
         this.surname = surname;
@@ -31,8 +29,7 @@ public class User {
     }
 
 
-    public User(String username, String name, String surname, String email, String phone) {
-        this.username = username;
+    public User(String name, String surname, String email, String phone) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -40,14 +37,6 @@ public class User {
     }
 
     public User() {
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
@@ -94,10 +83,9 @@ public class User {
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
-                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';
     }
