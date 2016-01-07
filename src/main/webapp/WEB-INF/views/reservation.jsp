@@ -5,20 +5,29 @@
 
     <h1>Rezerwacja</h1>
 
-    <form class="form-horizontal">
-        <div class="form-group col-md-4">
+    <form class="form-horizontal well" name="reservation" method="post">
+        <div class="form-group">
+          <label for="datetimepicker" class="col-lg-2 control-label">Data</label>
+          <div class="col-lg-10">
             <div class='input-group date' id='datetimepicker'>
                 <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
             </div>
+          </div>
         </div>
-        <div class="form-group col-md-4">
-                <select class="form-control" id="select"></select>
+        <div class="form-group">
+          <label for="select" class="col-lg-2 control-label">Miejsca</label>
+          <div class="col-lg-10">
+            <select class="form-control" id="select"></select>
+          </div>
         </div>
-        <div class="form-group col-md-4">
-            <a class="btn btn-default">Submit</a>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
         </div>
     </form>
 
