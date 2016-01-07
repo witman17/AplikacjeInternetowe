@@ -10,7 +10,7 @@
     <p>Brak restauracji w miescie</p>
    </c:if>
    <c:forEach var="restaurant" items="${restaurants}" varStatus="counter">
-        <a href="/reservation?${restaurant}" class="btn btn-default btn-lg btn-block ">
+        <a href="reservation?id=${restaurant.id}" class="btn btn-default btn-lg btn-block ">
         ${restaurant.name} - ${restaurant.address.city} ${restaurant.address.street}/${restaurant.address.flat}
         </a>
    </c:forEach>

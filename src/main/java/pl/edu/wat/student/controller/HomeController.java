@@ -29,7 +29,10 @@ public class HomeController {
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.POST)
     public String getRestaurants(@ModelAttribute("home") HomeForm form, RedirectAttributes attributes) {
         List<Restaurant> restaurants = RestaurantService.findAllByCity(form.getCity());
-        attributes.addFlashAttribute("restaurants", restaurants);
+        if (restaurants.isEmpty())
+            attributes.addFlashAttribute("restaurants", null);
+        else
+            attributes.addFlashAttribute("restaurants", restaurants);
         return "redirect:restaurants";
     }
 

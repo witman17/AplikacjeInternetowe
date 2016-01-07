@@ -7,10 +7,10 @@
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">Nazwa</h3>
+        <h3 class="panel-title">${resForm.restaurant.name}</h3>
       </div>
       <div class="panel-body">
-        <form class="form-horizontal" name="reservation" method="post">
+        <form class="form-horizontal" name="resForm" method="post">
                 <div class=>
 
                 </div>
@@ -18,7 +18,9 @@
                   <label for="datetimepicker" class="col-lg-2 control-label">Data</label>
                   <div class="col-lg-10">
                     <div class='input-group date' id='datetimepicker'>
-                        <input type='text' class="form-control" />
+                        <input type='text' name="date" id="datePicker" class="form-control"
+
+                         />
                           <span class="input-group-addon">
                               <span class="glyphicon glyphicon-calendar"></span>
                           </span>
@@ -52,4 +54,9 @@
     $(function () {
         $('#datetimepicker').datetimepicker();
     });
+
+    var listUpdate = function(){
+
+
+    }
 </script>

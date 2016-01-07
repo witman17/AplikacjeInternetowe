@@ -25,4 +25,8 @@ public class RestaurantService {
         return DBService.getMongoOperations().find(query, Restaurant.class);
     }
 
+    public static Restaurant findOne(String id) {
+        Query query = new Query(Criteria.where("_id").is(id));
+        return DBService.getMongoOperations().findOne(query, Restaurant.class);
+    }
 }
