@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.edu.wat.student.database.RestaurantService;
 import pl.edu.wat.student.model.db.Restaurant;
 import pl.edu.wat.student.model.form.HomeForm;
@@ -27,11 +27,10 @@ public class HomeController {
     }
 
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.POST)
-    public ModelAndView getRestaurants(@ModelAttribute("home") HomeForm form) {
-        ModelAndView modelAndView = new ModelAndView("restaurants");
+    public String getRestaurants(@ModelAttribute("home") HomeForm form, RedirectAttributes attributes) {
         List<Restaurant> restaurants = RestaurantService.findAllByCity(form.getCity());
-        modelAndView.addObject(restaurants);
-        return modelAndView;
+        attributes.addFlashAttribute("restaurants", restaurants);
+        return "redirect:restaurants";
     }
 
     @ModelAttribute("home")

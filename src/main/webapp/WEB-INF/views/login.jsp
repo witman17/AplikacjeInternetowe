@@ -3,7 +3,7 @@
 <tiles:insertDefinition name="defaultTemplate">
     <tiles:putAttribute name="body">
 
-<h2>Log in</h2>
+<h2>Logowanie</h2>
 <form class="form-horizontal well" name="user" method="post">
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
