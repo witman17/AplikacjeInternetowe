@@ -5,20 +5,24 @@
 
     <h1>Rezerwacja</h1>
 
-    <div class="container">
-        <div class="row">
-            <div class='col-sm-6'>
-                <div class="form-group">
-                    <div class='input-group date' id='datetimepicker'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
+    <form class="form-horizontal">
+        <div class="form-group col-md-4">
+            <div class='input-group date' id='datetimepicker'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
             </div>
         </div>
-    </div>
+        <div class="form-group col-md-4">
+                <select class="form-control" id="select"></select>
+        </div>
+        <div class="form-group col-md-4">
+            <a class="btn btn-default">Submit</a>
+        </div>
+    </form>
+
+
 
     </tiles:putAttribute>
 </tiles:insertDefinition>
