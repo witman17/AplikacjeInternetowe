@@ -21,6 +21,9 @@ public class Table {
         this.location = location;
     }
 
+    public Table() {
+    }
+
     public int getSeatsNo() {
         return seatsNo;
     }

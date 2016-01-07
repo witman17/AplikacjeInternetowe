@@ -7,15 +7,13 @@ package pl.edu.wat.student.model.db;
 public class Address {
 
     private String street;
-    private String streetNo;
     private String flat;
     private String city;
     private String zipCode;
     private String country;
 
-    public Address(String street, String streetNo, String flat, String city, String zipCode, String country) {
+    public Address(String street, String flat, String city, String zipCode, String country) {
         this.street = street;
-        this.streetNo = streetNo;
         this.flat = flat;
         this.city = city;
         this.zipCode = zipCode;
@@ -28,14 +26,6 @@ public class Address {
 
     public void setStreet(String street) {
         this.street = street;
-    }
-
-    public String getStreetNo() {
-        return streetNo;
-    }
-
-    public void setStreetNo(String streetNo) {
-        this.streetNo = streetNo;
     }
 
     public String getFlat() {
@@ -74,7 +64,6 @@ public class Address {
     public String toString() {
         return "Address{" +
                 "street='" + street + '\'' +
-                ", streetNo='" + streetNo + '\'' +
                 ", flat='" + flat + '\'' +
                 ", city='" + city + '\'' +
                 ", zipCode='" + zipCode + '\'' +
